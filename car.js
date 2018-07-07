@@ -17,6 +17,7 @@ var Car = /** @class */ (function () {
     return Car;
 }());
 var car = new Car('BMW');
-car.honk;
+car.honk();
 console.log(car.accelerate);
 car.accelerate(60);
+console.log(car.acceleation);

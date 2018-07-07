@@ -1,20 +1,19 @@
-// interface ()
-// {
-//     speed=number;
-// }
-var Car = /** @class */ (function () {
-    function Car(acceleation, name) {
-        var _this = this;
-        this.acceleation = acceleation;
-        this.name = name;
-        this.honk = (function () {
-            console.log('$this.name is syaing :Tooooot!');
-        });
-        this.accelerate = (function (speed) {
-            _this.acceleation = _this.acceleation + speed;
-        });
+function Car(name)
+{
+    this.name=name;
+    this.acceleration=0;
+    this.honk=function()
+    {
+        console.log(`$this.name) is saying :Tooooot!`)
+    };
+
+    this.accelerate=function(speed){
+        this.acceleration=this.acceleration + speed;
     }
-    return Car;
-}());
-var car = new Car(60, 'BMW');
-car.honk;
+}
+
+var car=new Car('BMW');
+car.honk();
+console.log(car.accelerate);
+car.accelerate(60);
+console.log(car.acceleration    );
