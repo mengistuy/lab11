@@ -1,10 +1,11 @@
 class Person{
     _firstname:string="";
-    getFirstname()
+    get firstname()
     {
         return this._firstname;
     }
-    setFirstname(firstname:string)
+  //  set Firstname(firstname:string)
+   set firstname(firstname)
     {
         this._firstname=firstname;
     }
@@ -13,6 +14,6 @@ class Person{
 }
 
 var person=new Person();
-person.setFirstname("Asaad");
-console.log(person.getFirstname())
+person._firstname="Asaad";
+console.log(person.firstname)
 

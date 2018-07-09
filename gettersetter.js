@@ -1,17 +1,17 @@
-var Person = /** @class */ (function () {
-    function Person() {
+class Person {
+    constructor() {
         this._firstname = "";
         this.enumerable = true;
         this.configurable = true;
     }
-    Person.prototype.getFirstname = function () {
+    get firstname() {
         return this._firstname;
-    };
-    Person.prototype.setFirstname = function (firstname) {
+    }
+    //  set Firstname(firstname:string)
+    set firstname(firstname) {
         this._firstname = firstname;
-    };
-    return Person;
-}());
+    }
+}
 var person = new Person();
-person.setFirstname("Asaad");
-console.log(person.getFirstname());
+person._firstname = "Asaad";
+console.log(person.firstname);
